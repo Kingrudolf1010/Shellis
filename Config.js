@@ -7,7 +7,7 @@
    ===================================================================== */
 window.SITE = {
   SUPABASE_URL: "https://bbbfsbkttvihxpocwrds.supabase.co/rest/v1/",
-  SUPABASE_KEY: "sb_publishable_6bQxXKYsunTHTCQmNyM4Fg_1j80acXz"
+  SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJiYmZzYmt0dHZpaHhwb2N3cmRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTExNDcwODMsImV4cCI6MjEwNjcyMzA4M30.YZozQJYHXQ8F8bM7e3gGEPk8lwSJTJxg1f6mTJLVzk0"
 };
 
 /* Read rows from a Supabase table through its REST API. Example: dbGet("courses?select=*") */
@@ -28,3 +28,10 @@ function dbError(e) {
     ? "The database is not connected yet. Open config.js and add your Supabase URL and key."
     : "Could not load data. Check your internet connection and your Supabase settings.";
 }
+
+/* Font Awesome class for an icon name. Use "b:windows" for brand icons, "network-wired" for normal ones. */
+function faIcon(name) {
+  name = name || "book";
+  return name.startsWith("b:") ? "fa-brands fa-" + name.slice(2) : "fa-solid fa-" + name;
+}
+
